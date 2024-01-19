@@ -2,24 +2,90 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Students</title>
-    <link rel="stylesheet" th:href="@{/styles.css}"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Frontend</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #app {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
-<p th:text="'Hello ' + ${name != null ? name : 'world'}" ></p>
-Hello <p th:if="${name} != null" th:text="${name}"></p>
-<p th:unless="${name} != null">world</p>
+<div id="app"></div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // fetch data from the API endpoints and update the UI
+        fetchDataAndRender();
+    });
 
-<a th:href="@{/students-page/add}">Dodaj Studenta</a>
-<table>
-    <tbody>
-        <tr th:each="student : ${students}">
-            <td th:text="${student.name}"></td>
-            <td th:text="${student.unit}"></td>
-            <td th:text="${student.index}"></td>
-        </tr>
-    </tbody>
-</table>
+    function fetchDataAndRender() {
+        // fetch data from the API endpoints and update the UI
+        // use the Fetch API or a library like Axios
+        // for simplicity, use dummy data for illustration
+
+        const dummyData = [
+            { id: 1, name: "Author 1" },
+            { id: 2, name: "Author 2" },
+            { id: 3, name: "Author 3" },
+        ];
+
+        renderAuthors(dummyData);
+    }
+
+    function renderAuthors(authors) {
+        const appDiv = document.getElementById("app");
+
+        const table = document.createElement("table");
+        const headerRow = table.insertRow(0);
+
+        const idHeader = headerRow.insertCell(0);
+        idHeader.innerHTML = "<b>ID</b>";
+
+        const nameHeader = headerRow.insertCell(1);
+        nameHeader.innerHTML = "<b>Name</b>";
+
+        authors.forEach((author) => {
+            const row = table.insertRow(-1);
+
+            const idCell = row.insertCell(0);
+            idCell.textContent = author.id;
+
+            const nameCell = row.insertCell(1);
+            nameCell.textContent = author.name;
+        });
+
+        appDiv.appendChild(table);
+    }
+</script>
 </body>
-<footer th:insert="footer"></footer>
 </html>
