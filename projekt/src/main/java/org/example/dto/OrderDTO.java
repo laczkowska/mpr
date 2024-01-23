@@ -15,9 +15,6 @@ public class OrderDTO {
         this.totalPrice = order.getTotalPrice();
         this.customerName = order.getCustomerName();
         this.shippingAddress = order.getShippingAddress();
-        // Inicjalizacja innych pól z obiektu Order
-        // Na przykład:
-        // this.someOtherField = order.getSomeOtherField();
     }
 
     // Getters

@@ -45,5 +45,5 @@ public class BookService {
         return books.stream().map(bookMapper::bookToBookDTO).collect(Collectors.toList());
     }
 
-    // Tutaj można dodać dodatkowe metody serwisu, jeśli są potrzebne
+
 }

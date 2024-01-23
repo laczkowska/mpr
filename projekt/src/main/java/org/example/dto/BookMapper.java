@@ -10,5 +10,5 @@ public interface BookMapper {
 
     BookDTO bookToBookDTO(Book book);
 
-    // Tutaj można dodać dodatkowe metody mapowania, jeśli są potrzebne
+
 }
