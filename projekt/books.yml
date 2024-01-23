@@ -1,0 +1,293 @@
+- title: "Merciless Kings. Boneyard Kings. Tom 1"
+  author: "Becca Steele"
+  category: "Obyczajowa"
+  price: 29.99
+  quantityInStock: 10
+
+- title: "Vicious Queen. Boneyard Kings. Tom 2"
+  author: "Becca Steele"
+  category: "Obyczajowa"
+  price: 19.99
+  quantityInStock: 5
+
+- title: "Ruthless Kingdom. Boneyard Kings. Tom 3"
+  author: "Becca Steele"
+  category: "Obyczajowa"
+  price: 24.99
+  quantityInStock: 7
+
+- title: "Miłość. Seria Twisted"
+  author: "Ana Huang"
+  category: "Obyczajowa"
+  price: 37.98
+  quantityInStock: 4
+
+- title: "Gry. Seria Twisted"
+  author: "Ana Huang"
+  category: "Obyczajowa"
+  price: 33.23
+  quantityInStock: 9
+
+- title: "Nienawiść. Seria Twisted"
+  author: "Ana Huang"
+  category: "Obyczajowa"
+  price: 34.99
+  quantityInStock: 2
+
+- title: "Kłamstwa. Seria Twisted"
+  author: "Ana Huang"
+  category: "Obyczajowa"
+  price: 35.43
+  quantityInStock: 12
+
+- title: "Haunting Adeline"
+  author: "H.D. Carlton"
+  category: "Obyczajowa"
+  price: 47.99
+  quantityInStock: 10
+
+- title: "Hunting Adeline"
+  author: "H.D. Carlton"
+  category: "Obyczajowa"
+  price: 46.89
+  quantityInStock: 9
+
+- title: "I Wanna Fall. Bright Side"
+  author: "Aleksandra Nil"
+  category: "Obyczajowa"
+  price: 33.24
+  quantityInStock: 3
+
+- title: "Steve Jobs: Biografia"
+  author: "Walter Isaacson"
+  category: "Biografia"
+  price: 24.96
+  quantityInStock: 10
+
+- title: "Malcolm X: Autobiografia"
+  author: "Malcolm X"
+  category: "Biografia"
+  price: 23.99
+  quantityInStock: 6
+
+- title: "Helen Keller: Historia mojego życia"
+  author: "Helen Keller"
+  category: "Biografia"
+  price: 33.56
+  quantityInStock: 13
+
+- title: "Albert Einstein: Autobiografia"
+  author: "Albert Einstein"
+  category: "Biografia"
+  price: 24.99
+  quantityInStock: 10
+
+- title: "Madame Curie"
+  author: "Eve Curie"
+  category: "Biografia"
+  price: 59.99
+  quantityInStock: 11
+
+- title: "Nelson Mandela: Długa droga ku wolności"
+  author: "Nelson Mandela"
+  category: "Biografia"
+  price: 24.95
+  quantityInStock: 6
+
+- title: "Elon Musk: Tesla, SpaceX i dążenie do zdominowania kosmosu"
+  author: "Ashlee Vance"
+  category: "Biografia"
+  price: 39.87
+  quantityInStock: 10
+
+- title: "Coco Chanel: Życie i legenda"
+  author: "Justine Picardie"
+  category: "Biografia"
+  price: 84.99
+  quantityInStock: 2
+
+- title: "Winston Churchill: Biografia"
+  author: "Roy Jenkins"
+  category: "Biografia"
+  price: 14.33
+  quantityInStock: 10
+
+- title: "Mahatma Gandhi: Moja walka"
+  author: "Mahatma Gandhi"
+  category: "Biografia"
+  price: 24.99
+  quantityInStock: 10
+
+- title: "Władca Pierścieni: Drużyna Pierścienia"
+  author: "J.R.R. Tolkien"
+  category: "Fantasy"
+  price: 20.99
+  quantityInStock: 9
+
+- title: "Harry Potter i Kamień Filozoficzny"
+  author: "J.K. Rowling"
+  category: "Fantasy"
+  price: 24.99
+  quantityInStock: 10
+
+- title: "Zemsta Sithów"
+  author: "Timothy Zahn"
+  category: "Fantasy"
+  price: 44.99
+  quantityInStock: 8
+
+- title: "Eragon"
+  author: "Christopher Paolini"
+  category: "Fantasy"
+  price: 67.99
+  quantityInStock: 7
+
+- title: "Gra o tron"
+  author: "George R.R. Martin"
+  category: "Fantasy"
+  price: 24.99
+  quantityInStock: 3
+
+- title: "Narnia: Lew, Czarownica i stara szafa"
+  author: "autor: C.S. Lewis"
+  category: "Fantasy"
+  price: 24.99
+  quantityInStock: 10
+
+- title: "Mistborn: Uczta nieskończoności"
+  author: "Brandon Sanderson"
+  category: "Fantasy"
+  price: 25.79
+  quantityInStock: 9
+
+- title: "His Dark Materials: Złoty Kompas"
+  author: "Philip Pullman"
+  category: "Fantasy"
+  price: 84.98
+  quantityInStock: 8
+
+- title: "Terry Pratchett: Kolor magii"
+  author: "Terry Pratchett"
+  category: "Fantasy"
+  price: 78.99
+  quantityInStock: 10
+
+- title: "Zwiadowcy: Ruiny Gorlanu"
+  author: "John Flanagan"
+  category: "Fantasy"
+  price: 24.99
+  quantityInStock: 8
+
+- title: "Zaginiona dziewczyna"
+  author: "Gillian Flynn"
+  category: "Kryminał"
+  price: 34.60
+  quantityInStock: 10
+
+- title: "Dziewczyna z pociągu"
+  author: "Paula Hawkins"
+  category: "Kryminał"
+  price: 23.73
+  quantityInStock: 5
+
+- title: "Morderstwo w Orient Expressie"
+  author: "Agatha Christie"
+  category: "Kryminał"
+  price: 34.63
+  quantityInStock: 7
+
+- title: "Zamknięte drzwi"
+  author: "B.A. Paris"
+  category: "Kryminał"
+  price: 46.23
+  quantityInStock: 4
+
+- title: "Gry. Seria Twisted"
+  author: "Ana Huang"
+  category: "Kryminał"
+  price: 34.45
+  quantityInStock: 9
+
+- title: "Czerwone Gardło"
+  author: "Jo Nesbø"
+  category: "Kryminał"
+  price: 34.65
+  quantityInStock: 2
+
+- title: "Sherlock Holmes: Studium w szkarłacie"
+  author: "Arthur Conan Doyle"
+  category: "Kryminał"
+  price: 56.97
+  quantityInStock: 12
+
+- title: "Czarna Dalia"
+  author: " James Ellroy"
+  category: "Kryminał"
+  price: 43.56
+  quantityInStock: 10
+
+- title: "Po sezonie"
+  author: "Charlotte Link"
+  category: "Kryminał"
+  price: 26.56
+  quantityInStock: 9
+
+- title: "Ostatni świadek"
+  author: "Robert Bryndza"
+  category: "Kryminał"
+  price: 42.54
+  quantityInStock: 3
+
+- title: "SMały Książę"
+  author: "Antoine de Saint-Exupéry"
+  category: "Dla Dzieci"
+  price: 24.96
+  quantityInStock: 10
+
+- title: "Alicja w Krainie Czarów"
+  author: "Lewis Carroll"
+  category: "Dla Dzieci"
+  price: 23.99
+  quantityInStock: 6
+
+- title: "Opowieści z Narnii: Lew, Czarownica i stara szafa"
+  author: "C.S. Lewis"
+  category: "Dla Dzieci"
+  price: 33.56
+  quantityInStock: 13
+
+- title: "Charlie i fabryka czekolady"
+  author: "Roald Dahl"
+  category: "Dla Dzieci"
+  price: 24.99
+  quantityInStock: 10
+
+- title: "Piotruś Pan"
+  author: "J.M. Barrie"
+  category: "Dla Dzieci"
+  price: 59.99
+  quantityInStock: 11
+
+- title: "Kubuś Puchatek"
+  author: "A.A. Milne"
+  category: "Dla Dzieci"
+  price: 24.95
+  quantityInStock: 6
+
+- title: "Matylda"
+  author: "Roald Dahl"
+  category: "Dla Dzieci"
+  price: 39.87
+  quantityInStock: 10
+
+- title: "Przygody Tomka Sawyera"
+  author: "Mark Twain"
+  category: "Dla Dzieci"
+  price: 84.99
+  quantityInStock: 2
+
+- title: "Percy Jackson i Bogowie Olimpijscy: Złodziej Pioruna"
+  author: "Rick Riordan"
+  category: "Dla Dzieci"
+  price: 14.33
+  quantityInStock: 10
