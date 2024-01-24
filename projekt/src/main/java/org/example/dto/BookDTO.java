@@ -72,4 +72,3 @@ public class BookDTO {
         this.quantityInStock = quantityInStock;
     }
 }
-
