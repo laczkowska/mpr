@@ -1,54 +1,65 @@
 package org.example.dto;
 
-import org.example.data.Order;
+import java.util.List;
 
 public class OrderDTO {
     private Long id;
-    private int quantity;
-    private double totalPrice;
     private String customerName;
     private String shippingAddress;
+    private List<OrderItemDTO> items;
 
-    public OrderDTO(Order order) {
-        this.id = order.getId();
-        this.quantity = order.getQuantity();
-        this.totalPrice = order.getTotalPrice();
-        this.customerName = order.getCustomerName();
-        this.shippingAddress = order.getShippingAddress();
+    // Default constructor
+    public OrderDTO() {
     }
 
-    // Getters
+    // Constructor with all fields
+    public OrderDTO(Long id, String customerName, String shippingAddress, List<OrderItemDTO> items) {
+        this.id = id;
+        this.customerName = customerName;
+        this.shippingAddress = shippingAddress;
+        this.items = items;
+    }
+
+    // Getters and Setters
     public Long getId() {
         return id;
     }
-    public int getQuantity() {
-        return quantity;
+
+    public void setId(Long id) {
+        this.id = id;
     }
-    public double getTotalPrice() {
-        return totalPrice;
-    }
+
     public String getCustomerName() {
         return customerName;
     }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
+
     public String getShippingAddress() {
         return shippingAddress;
     }
 
-    // Setters
-    public void setId(Long id) {
-        this.id = id;
-    }
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
-    public void setTotalPrice(double totalPrice) {
-        this.totalPrice = totalPrice;
-    }
-    public void setCustomerName(String customerName) {
-        this.customerName = customerName;
-    }
     public void setShippingAddress(String shippingAddress) {
         this.shippingAddress = shippingAddress;
     }
-    // Możesz dodać tutaj dodatkowe metody, jeśli są potrzebne
+
+    public List<OrderItemDTO> getItems() {
+        return items;
+    }
+
+    public void setItems(List<OrderItemDTO> items) {
+        this.items = items;
+    }
+
+    // Additional methods for convenience
+    // For example, a method to calculate the total price of the order
+    public double calculateTotalPrice() {
+        return items.stream()
+                .mapToDouble(item -> item.getPrice() * item.getQuantity())
+                .sum();
+    }
 }
+
+
