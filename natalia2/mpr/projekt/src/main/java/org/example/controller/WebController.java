@@ -19,22 +19,21 @@ public class WebController {
         this.orderService = orderService;
     }
 
-    @GetMapping
-    public String index(Model model) {
-      //  model.addAttribute("books", bookService.getAllBooks());
-      //  model.addAttribute("orders", orderService.getAllOrders());
-        return "index";
+    @GetMapping("/index")
+    public String index() {
+        return "index"; // jak usunę @GetMapping("/index") to nie podkreśla "index"
     }
 
-    @GetMapping("/books")
+    @GetMapping
     public String getAllBooks(Model model) {
         model.addAttribute("books", bookService.getAllBooks());
-        return "books";
+        return "books"; // to samo tutaj
     }
 
     @GetMapping("/orders")
     public String getAllOrders(Model model) {
         model.addAttribute("orders", orderService.getAllOrders());
-        return "orders";
+        return "orders"; // i tutaj
     }
 }
+
