@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Księgarnia</title>
+    <link rel="stylesheet" th:href="@{/styles.css}"/>
+</head>
+<body>
+<h1>Lista Książek</h1>
+<a th:href="@{/api/books/add}">Dodaj Książkę</a>
+<table>
+    <thead>
+    <tr>
+        <th>Tytuł</th>
+        <th>Autor</th>
+        <th>Kategoria</th>
+        <th>Cena</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="book : ${books}">
+        <td th:text="${book.title}"></td>
+        <td th:text="${book.author}"></td>
+        <td th:text="${book.category}"></td>
+        <td th:text="${book.price}"></td>
+        <td><a th:href="@{/api/books/{id}(id=${book.id})}">Szczegóły</a></td>
+    </tr>
+    </tbody>
+</table>
+
+<footer>
+    <p>Tu będzie kiedyś piękna stopka</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,188 @@
+- id: 1
+  title: "Merciless Kings. Boneyard Kings. Tom 1"
+  author: "Becca Steele"
+  category: "Obyczajowa"
+  price: 29.99
+  quantityInStock: 10
+
+- id: 2
+  title: "Ruthless Kingdom. Boneyard Kings. Tom 3"
+  author: "Becca Steele"
+  category: "Obyczajowa"
+  price: 24.99
+  quantityInStock: 7
+
+- id: 3
+  title: "Miłość. Seria Twisted"
+  author: "Ana Huang"
+  category: "Obyczajowa"
+  price: 37.98
+  quantityInStock: 14
+
+- id: 4
+  title: "Nienawiść. Seria Twisted"
+  author: "Ana Huang"
+  category: "Obyczajowa"
+  price: 34.99
+  quantityInStock: 12
+
+- id: 5
+  title: "Haunting Adeline"
+  author: "H.D. Carlton"
+  category: "Obyczajowa"
+  price: 47.99
+  quantityInStock: 10
+
+- id: 6
+  title: "I Wanna Fall. Bright Side"
+  author: "Aleksandra Nil"
+  category: "Obyczajowa"
+  price: 33.24
+  quantityInStock: 3
+
+- id: 7
+  title: "Steve Jobs: Biografia"
+  author: "Walter Isaacson"
+  category: "Biografia"
+  price: 24.96
+  quantityInStock: 10
+
+- id: 8
+  title: "Helen Keller: Historia mojego życia"
+  author: "Helen Keller"
+  category: "Biografia"
+  price: 33.56
+  quantityInStock: 13
+
+- id: 9
+  title: "Madame Curie"
+  author: "Eve Curie"
+  category: "Biografia"
+  price: 59.99
+  quantityInStock: 11
+
+- id: 10
+  title: "Coco Chanel: Życie i legenda"
+  author: "Justine Picardie"
+  category: "Biografia"
+  price: 84.99
+  quantityInStock: 2
+
+- id: 11
+  title: "Winston Churchill: Biografia"
+  author: "Roy Jenkins"
+  category: "Biografia"
+  price: 14.33
+  quantityInStock: 10
+
+- id: 12
+  title: "Harry Potter i Kamień Filozoficzny"
+  author: "J.K. Rowling"
+  category: "Fantasy"
+  price: 24.99
+  quantityInStock: 10
+
+- id: 13
+  title: "Zemsta Sithów"
+  author: "Timothy Zahn"
+  category: "Fantasy"
+  price: 44.99
+  quantityInStock: 8
+
+- id: 14
+  title: "Gra o tron"
+  author: "George R.R. Martin"
+  category: "Fantasy"
+  price: 24.99
+  quantityInStock: 3
+
+- id: 15
+  title: "Mistborn: Uczta nieskończoności"
+  author: "Brandon Sanderson"
+  category: "Fantasy"
+  price: 25.79
+  quantityInStock: 9
+
+- id: 16
+  title: "His Dark Materials: Złoty Kompas"
+  author: "Philip Pullman"
+  category: "Fantasy"
+  price: 84.98
+  quantityInStock: 8
+
+- id: 17
+  title: "Zwiadowcy: Ruiny Gorlanu"
+  author: "John Flanagan"
+  category: "Fantasy"
+  price: 24.99
+  quantityInStock: 8
+
+- id: 18
+  title: "Zaginiona dziewczyna"
+  author: "Gillian Flynn"
+  category: "Kryminał"
+  price: 34.60
+  quantityInStock: 10
+
+- id: 19
+  title: "Zamknięte drzwi"
+  author: "B.A. Paris"
+  category: "Kryminał"
+  price: 46.23
+  quantityInStock: 4
+
+- id: 20
+  title: "Sherlock Holmes: Studium w szkarłacie"
+  author: "Arthur Conan Doyle"
+  category: "Kryminał"
+  price: 56.97
+  quantityInStock: 12
+
+- id: 21
+  title: "Po sezonie"
+  author: "Charlotte Link"
+  category: "Kryminał"
+  price: 26.56
+  quantityInStock: 9
+
+- id: 22
+  title: "Ostatni świadek"
+  author: "Robert Bryndza"
+  category: "Kryminał"
+  price: 42.54
+  quantityInStock: 3
+
+- id: 23
+  title: "Mały Książę"
+  author: "Antoine de Saint-Exupéry"
+  category: "Dla Dzieci"
+  price: 24.96
+  quantityInStock: 10
+
+- id: 24
+  title: "Alicja w Krainie Czarów"
+  author: "Lewis Carroll"
+  category: "Dla Dzieci"
+  price: 23.99
+  quantityInStock: 6
+
+- id: 25
+  title: "Charlie i fabryka czekolady"
+  author: "Roald Dahl"
+  category: "Dla Dzieci"
+  price: 24.99
+  quantityInStock: 16
+
+- id: 26
+  title: "Matylda"
+  author: "Roald Dahl"
+  category: "Dla Dzieci"
+  price: 39.87
+  quantityInStock: 10
+
+- id: 27
+  title: "Percy Jackson i Bogowie Olimpijscy: Złodziej Pioruna"
+  author: "Rick Riordan"
+  category: "Dla Dzieci"
+  price: 14.33
+  quantityInStock: 10
