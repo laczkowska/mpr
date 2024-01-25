@@ -5,7 +5,7 @@ public class OrderItemDTO {
     private int quantity;
     private double price;
 
-    public OrderItemDTO() {
+    public OrderItemDTO(long bookId, int i) {
     }
     public OrderItemDTO(Long bookId, int quantity, double price) {
         this.bookId = bookId;
