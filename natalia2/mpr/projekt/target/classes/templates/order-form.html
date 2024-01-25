@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Złóż Zamówienie</title>
+</head>
+<body>
+<h1>Złóż Zamówienie</h1>
+<form method="POST" th:action="@{/api/orders/placeOrder}" th:object="${orderDTO}">
+    <label for="quantity">Ilość:</label>
+    <input type="number" id="quantity" th:field="*{quantity}" required/>
+
+    <label for="customerName">Nazwa Klienta:</label>
+    <input type="text" id="customerName" th:field="*{customerName}" required/>
+
+    <label for="shippingAddress">Adres Wysyłki:</label>
+    <input type="text" id="shippingAddress" th:field="*{shippingAddress}" required/>
+
+    <button type="submit">Zamów</button>
+</form>
+
+<footer>
+    <p>Tu będzie kiedyś piękna stopka</p>
+</footer>
+</body>
+</html>

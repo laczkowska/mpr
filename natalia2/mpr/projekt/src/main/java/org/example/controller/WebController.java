@@ -19,11 +19,10 @@ public class WebController {
         this.orderService = orderService;
     }
 
-    @GetMapping("/")
+    @GetMapping
     public String index(Model model) {
-        // Optionally, you can add attributes to the model to be used in the index.html
-        model.addAttribute("books", bookService.getAllBooks());
-        model.addAttribute("orders", orderService.getAllOrders());
+      //  model.addAttribute("books", bookService.getAllBooks());
+      //  model.addAttribute("orders", orderService.getAllOrders());
         return "index";
     }
 

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Our Bookstore</title>
+</head>
+<body>
+<h1>Welcome to Our Online Bookstore</h1>
+<nav>
+    <ul>
+        <li><a th:href="@{/books}">View Books</a></li>
+        <li><a th:href="@{/add-book}">Add New Book</a></li>
+        <li><a th:href="@{/orders}">View Orders</a></li>
+        <li><a th:href="@{/place-order}">Place New Order</a></li>
+    </ul>
+</nav>
+</body>
+</html>
