@@ -8,11 +8,9 @@ public class OrderDTO {
     private String shippingAddress;
     private List<OrderItemDTO> items;
 
-    // Default constructor
     public OrderDTO() {
     }
 
-    // Constructor with all fields
     public OrderDTO(Long id, String customerName, String shippingAddress, List<OrderItemDTO> items) {
         this.id = id;
         this.customerName = customerName;
@@ -53,8 +51,7 @@ public class OrderDTO {
         this.items = items;
     }
 
-    // Additional methods for convenience
-    // For example, a method to calculate the total price of the order
+
     public double calculateTotalPrice() {
         return items.stream()
                 .mapToDouble(item -> item.getPrice() * item.getQuantity())
