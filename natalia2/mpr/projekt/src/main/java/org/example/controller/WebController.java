@@ -21,19 +21,19 @@ public class WebController {
 
     @GetMapping("/index")
     public String index() {
-        return "index"; // jak usunę @GetMapping("/index") to nie podkreśla "index"
+        return "index"; //
     }
 
     @GetMapping
     public String getAllBooks(Model model) {
         model.addAttribute("books", bookService.getAllBooks());
-        return "books"; // to samo tutaj
+        return "books"; //
     }
 
     @GetMapping("/orders")
     public String getAllOrders(Model model) {
         model.addAttribute("orders", orderService.getAllOrders());
-        return "orders"; // i tutaj
+        return "orders"; // 
     }
 }
 
