@@ -1,6 +1,5 @@
 spring:
   thymeleaf:
-    prefix: /WEB-INF/views/
     suffix: .html
 
   datasource:

@@ -33,7 +33,7 @@ public class WebController {
     @GetMapping("/orders")
     public String getAllOrders(Model model) {
         model.addAttribute("orders", orderService.getAllOrders());
-        return "orders"; // 
+        return "orders"; //
     }
 }
 
