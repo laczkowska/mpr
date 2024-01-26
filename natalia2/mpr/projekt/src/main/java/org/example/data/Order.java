@@ -1,6 +1,7 @@
 package org.example.data;
 
 import jakarta.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "`order`")
@@ -8,29 +9,25 @@ public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private int quantity;
     private double totalPrice;
     private String customerName;
     private String shippingAddress;
 
+    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
+    private Set<OrderItem> items;
+
+    // Constructor
     public Order(){}
-    public Order(Integer quantity, double totalPrice, String customerName, String shippingAddress){
-        this.quantity = quantity;
+
+    public Order(double totalPrice, String customerName, String shippingAddress){
         this.totalPrice = totalPrice;
         this.customerName = customerName;
         this.shippingAddress = shippingAddress;
     }
 
-    @ManyToOne
-    private Book book;
-
-    // Getters
+    // Getters and Setters
     public Long getId() {
         return id;
-    }
-
-    public int getQuantity() {
-        return quantity;
     }
 
     public double getTotalPrice() {
@@ -45,17 +42,12 @@ public class Order {
         return shippingAddress;
     }
 
-    public Book getBook() {
-        return book;
+    public Set<OrderItem> getItems() {
+        return items;
     }
 
-    // Setters
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
     }
 
     public void setTotalPrice(double totalPrice) {
@@ -70,7 +62,8 @@ public class Order {
         this.shippingAddress = shippingAddress;
     }
 
-    public void setBook(Book book) {
-        this.book = book;
+    public void setItems(Set<OrderItem> items) {
+        this.items = items;
     }
 }
+
