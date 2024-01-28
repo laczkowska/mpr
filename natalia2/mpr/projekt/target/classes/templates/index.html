@@ -1,17 +1,65 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Witamy w naszym sklepie</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fff0f5;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #db7093;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .navigation {
+            background-color: #ffe4e1;
+            padding: 10px;
+        }
+        .nav-links {
+            list-style-type: none;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-links li {
+            display: inline;
+            margin-right: 20px;
+        }
+        .nav-links li a {
+            text-decoration: none;
+            color: #800000;
+            font-weight: bold;
+        }
+        .welcome-section {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .welcome-section img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-<h1>Witamy w naszym sklepie</h1>
-<nav>
-    <ul>
-        <li><a th:href="@{/books}">Pokaż książki</a></li>
-        <li><a th:href="@{/view-orders}">Pokaż zamówienia</a></li> <!-- Zmieniona ścieżka -->
-        <li><a th:href="@{/place-order}">Złóż nowe zamówienie</a></li>
+<div class="header">
+    <h1>Witamy w naszym sklepie</h1>
+</div>
+<div class="navigation">
+    <ul class="nav-links">
+        <li><a href="/books">Pokaż książki</a></li>
+        <li><a href="/view-orders">Pokaż zamówienia</a></li>
     </ul>
-</nav>
+</div>
+<div class="welcome-section">
+    <h2>Odkryj świat książek z nami!</h2>
+    <p>Przeglądaj naszą szeroką kolekcję tytułów i znajdź coś dla siebie.</p>
+    <img src="https://images.unsplash.com/photo-1610072175216-df383b91b89d?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Obrazy Książek">
+</div>
 </body>
 </html>

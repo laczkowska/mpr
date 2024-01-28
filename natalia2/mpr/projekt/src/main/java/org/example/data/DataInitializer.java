@@ -1,7 +1,6 @@
 package org.example.data;
 
 import org.example.repository.BookRepository;
-import org.example.dto.OrderDTO;
 import org.example.repository.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -55,20 +54,8 @@ public class DataInitializer implements CommandLineRunner {
                 Long bookId = ((Number) itemRecord.get("bookId")).longValue();
                 Integer quantity = (Integer) itemRecord.get("quantity");
 
-                // Retrieve book details from the repository
-                Book book = bookRepository.findById(bookId).orElse(null);
-                if (book != null) {
-                    // Display detailed book information
-                    System.out.println("| Customer: " + customerName +
-                            " | Address: " + shippingAddress +
-                            " | Book Title: " + book.getTitle() +
-                            " | Book ID: " + bookId +
-                            " | Quantity: " + quantity + " |");
-                } else {
-                    System.out.println("Book not found for ID: " + bookId);
-                }
+                System.out.println(customerName + " | " + shippingAddress + " | " + bookId + " | " + quantity + " |");
             }
         }
     }
-
 }

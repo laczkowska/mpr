@@ -1,34 +1,58 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Orders</title>
+    <meta charset="UTF-8">
+    <title>Lista Zamówień</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fff0f5;
+        }
+        h1 {
+            color: #db7093;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 2px solid #db7093;
+        }
+        th {
+            background-color: #ffe4e1;
+            color: #800000;
+        }
+    </style>
 </head>
 <body>
-<h1>Orders</h1>
+<h1>Lista Zamówień</h1>
 <table>
     <tr>
-        <th>Customer Name</th>
-        <th>Shipping Address</th>
-        <th>Book ID</th>
-        <th>Quantity</th>
-        <th>Total Price</th>
+        <th>Imię i Nazwisko Klienta</th>
+        <th>Adres Dostawy</A></th>
+        <th>ID Książki</th>
+        <th>Ilość</th>
+        <th>Kwota Całkowita</th>
     </tr>
     <tr th:each="order : ${orders}">
-        <td th:text="${order.customerName}">Customer Name</td>
-        <td th:text="${order.shippingAddress}">Shipping Address</td>
+        <td th:text="${order.customerName}">Imię i Nazwisko Klienta</td>
+        <td th:text="${order.shippingAddress}">Adres Dostawy</td>
         <td>
             <ul>
-                <li th:each="item : ${order.items}" th:text="${item.bookId}">Book ID</li>
+                <li th:each="item : ${order.items}" th:text="${item.bookId}">ID Książki</li>
             </ul>
         </td>
         <td>
             <ul>
-                <li th:each="item : ${order.items}" th:text="${item.quantity}">Quantity</li>
+                <li th:each="item : ${order.items}" th:text="${item.quantity}">Ilość</li>
             </ul>
         </td>
-        <td th:text="${order.totalPrice}">Total Price</td>
+        <td th:text="${order.totalPrice}">Kwota Całkowita</td>
     </tr>
 </table>
 </body>
 </html>
-

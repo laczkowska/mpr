@@ -13,7 +13,6 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
     }
 
-    // Handle generic exceptions
     @ExceptionHandler(Exception.class)
     public ResponseEntity<String> handleException(Exception ex) {
         // Log the exception details for debugging
