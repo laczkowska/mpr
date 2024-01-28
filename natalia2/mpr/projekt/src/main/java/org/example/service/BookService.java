@@ -33,9 +33,6 @@ public class BookService {
 
     public List<BookDTO> getAllBooks() {
         List<Book> books = bookRepository.findAll();
-        if (books.isEmpty()) {
-            throw new ResourceNotFoundException("Brak dostępnych książek.");
-        }
         return books.stream()
                 .map(book -> modelMapper.map(book, BookDTO.class))
                 .collect(Collectors.toList());

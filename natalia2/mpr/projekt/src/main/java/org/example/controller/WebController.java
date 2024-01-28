@@ -19,21 +19,22 @@ public class WebController {
         this.orderService = orderService;
     }
 
-    @GetMapping("/index")
+    @GetMapping
     public String index() {
         return "index"; //
     }
 
-    @GetMapping
+    @GetMapping("/books")
     public String getAllBooks(Model model) {
         model.addAttribute("books", bookService.getAllBooks());
-        return "books"; //
+        return "books";
     }
 
-    @GetMapping("/orders")
-    public String getAllOrders(Model model) {
+
+    @GetMapping("/view-orders")
+    public String viewAllOrders(Model model) {
         model.addAttribute("orders", orderService.getAllOrders());
-        return "orders"; //
+        return "view-orders";
     }
 }
 

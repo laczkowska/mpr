@@ -1,6 +1,8 @@
 package org.example.data;
 
 import jakarta.persistence.*;
+
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -13,11 +15,11 @@ public class Order {
     private String customerName;
     private String shippingAddress;
 
-    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
-    private Set<OrderItem> items;
+    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private Set<OrderItem> items = new HashSet<>();
 
     // Constructor
-    public Order(){}
+    public Order() {}
 
     public Order(double totalPrice, String customerName, String shippingAddress){
         this.totalPrice = totalPrice;
@@ -64,6 +66,11 @@ public class Order {
 
     public void setItems(Set<OrderItem> items) {
         this.items = items;
+    }
+
+    public void addItem(OrderItem item) {
+        items.add(item);
+        item.setOrder(this);
     }
 }
 

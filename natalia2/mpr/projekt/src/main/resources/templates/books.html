@@ -2,16 +2,28 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Szczegóły Książki</title>
+    <title>Lista Książek</title>
+    <style>
+        .category-column, .price-column {
+            padding-left: 20px; /* Dostosuj tę wartość zgodnie z potrzebami */
+        }
+    </style>
 </head>
 <body>
-<h1 th:text="${book.title}">Tytuł Książki</h1>
-<p>Autor: <span th:text="${book.author}">Autor</span></p>
-<p>Kategoria: <span th:text="${book.category}">Kategoria</span></p>
-<p>Cena: <span th:text="${book.price}">Cena</span></p>
-
-<footer>
-    <p>Tu będzie kiedyś piękna stopka</p>
-</footer>
+<h1>Lista Książek</h1>
+<table>
+    <tr>
+        <th>Tytuł</th>
+        <th>Autor</th>
+        <th class="category-column">Kategoria</th>
+        <th class="price-column">Cena</th>
+    </tr>
+    <tr th:each="book : ${books}">
+        <td th:text="${book.title}">Tytuł</td>
+        <td th:text="${book.author}">Autor</td>
+        <td th:text="${book.category}" class="category-column">Kategoria</td>
+        <td th:text="${book.price}" class="price-column">Cena</td>
+    </tr>
+</table>
 </body>
 </html>

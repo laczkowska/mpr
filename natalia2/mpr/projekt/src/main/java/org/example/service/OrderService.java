@@ -26,14 +26,14 @@ public class OrderService {
         this.bookRepository = bookRepository;
     }
 
-    public List<OrderDTO> getOrdersByCustomer(String customerName) {
-        return orderRepository.findByCustomerName(customerName).stream()
+    public List<OrderDTO> getAllOrders() {
+        return orderRepository.findAll().stream()
                 .map(this::convertToDTO)
                 .collect(Collectors.toList());
     }
 
-    public List<OrderDTO> getAllOrders() {
-        return orderRepository.findAll().stream()
+    public List<OrderDTO> getOrdersByCustomer(String customerName) {
+        return orderRepository.findByCustomerName(customerName).stream()
                 .map(this::convertToDTO)
                 .collect(Collectors.toList());
     }
@@ -50,7 +50,7 @@ public class OrderService {
             OrderItem orderItem = new OrderItem();
             orderItem.setBook(book);
             orderItem.setQuantity(itemDTO.getQuantity());
-            orderItem.setOrder(order); // setting the order for each item
+            orderItem.setOrder(order);
             return orderItem;
         }).collect(Collectors.toSet());
 
@@ -68,4 +68,9 @@ public class OrderService {
         return new OrderDTO(order.getId(), order.getCustomerName(), order.getShippingAddress(), items);
     }
 
+    public OrderDTO getOrderDetails(Long orderId) {
+        return orderRepository.findById(orderId)
+                .map(this::convertToDTO)
+                .orElseThrow(() -> new ResourceNotFoundException("Order not found with ID: " + orderId));
+    }
 }
