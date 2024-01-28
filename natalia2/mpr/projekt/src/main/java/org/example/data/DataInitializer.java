@@ -47,24 +47,27 @@ public class DataInitializer implements CommandLineRunner {
         List<Map<String, Object>> orderData = yaml.load(inputStream);
 
         for (Map<String, Object> record : orderData) {
-            Order order = new Order();
-            order.setCustomerName((String) record.get("customerName"));
-            order.setShippingAddress((String) record.get("shippingAddress"));
+            String customerName = (String) record.get("customerName");
+            String shippingAddress = (String) record.get("shippingAddress");
 
             List<Map<String, Object>> itemsData = (List<Map<String, Object>>) record.get("items");
             for (Map<String, Object> itemRecord : itemsData) {
-                OrderItem item = new OrderItem();
                 Long bookId = ((Number) itemRecord.get("bookId")).longValue();
-                bookRepository.findById(bookId).ifPresentOrElse(book -> {
-                    item.setBook(book);
-                    item.setQuantity((Integer) itemRecord.get("quantity"));
-                    item.setOrder(order);
-                    order.getItems().add(item);
-                }, () -> {
-                    System.out.println("Book not found with ID: " + bookId);
-                });
+                Integer quantity = (Integer) itemRecord.get("quantity");
+
+                // Retrieve book details from the repository
+                Book book = bookRepository.findById(bookId).orElse(null);
+                if (book != null) {
+                    // Display detailed book information
+                    System.out.println("| Customer: " + customerName +
+                            " | Address: " + shippingAddress +
+                            " | Book Title: " + book.getTitle() +
+                            " | Book ID: " + bookId +
+                            " | Quantity: " + quantity + " |");
+                } else {
+                    System.out.println("Book not found for ID: " + bookId);
+                }
             }
-            orderRepository.save(order);
         }
     }
 
