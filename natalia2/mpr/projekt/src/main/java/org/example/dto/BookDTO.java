@@ -8,11 +8,8 @@ public class BookDTO {
     private double price;
     private int quantityInStock;
 
-    // Konstruktor bezparametrowy
     public BookDTO() {
     }
-
-    // Konstruktor z wszystkimi parametrami
     public BookDTO(Long id, String title, String author, String category, double price, int quantityInStock) {
         this.id = id;
         this.title = title;

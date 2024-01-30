@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Lista Książek</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #fff0f5; /* delikatny różowy tło */
+            background-color: #fff0f5;
         }
         h1 {
-            color: #db7093; /* różowy nagłówek */
+            color: #db7093;
             text-align: center;
         }
         table {
@@ -28,6 +28,10 @@
         }
         .category-column, .price-column {
             text-align: right;
+        }
+        .sort-links, .filter-form {
+            text-align: center;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -49,3 +53,4 @@
 </table>
 </body>
 </html>
+

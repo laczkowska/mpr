@@ -8,8 +8,10 @@ import org.springframework.stereotype.Component;
 import org.yaml.snakeyaml.Yaml;
 
 import java.io.InputStream;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 @Component
 public class DataInitializer implements CommandLineRunner {
@@ -46,16 +48,31 @@ public class DataInitializer implements CommandLineRunner {
         List<Map<String, Object>> orderData = yaml.load(inputStream);
 
         for (Map<String, Object> record : orderData) {
-            String customerName = (String) record.get("customerName");
-            String shippingAddress = (String) record.get("shippingAddress");
+            Order order = new Order();
+            order.setCustomerName((String) record.get("customerName"));
+            order.setShippingAddress((String) record.get("shippingAddress"));
+            Set<OrderItem> orderItems = new HashSet<>();
 
             List<Map<String, Object>> itemsData = (List<Map<String, Object>>) record.get("items");
+            double totalPrice = 0;
             for (Map<String, Object> itemRecord : itemsData) {
                 Long bookId = ((Number) itemRecord.get("bookId")).longValue();
                 Integer quantity = (Integer) itemRecord.get("quantity");
+                double price = ((Number) itemRecord.get("price")).doubleValue();
 
-                System.out.println(customerName + " | " + shippingAddress + " | " + bookId + " | " + quantity + " |");
+                OrderItem orderItem = new OrderItem();
+                Book book = bookRepository.findById(bookId)
+                        .orElseThrow(() -> new RuntimeException("Book not found"));
+                orderItem.setBook(book);
+                orderItem.setQuantity(quantity);
+                orderItems.add(orderItem);
+
+                totalPrice += price * quantity; // Calculate total price
             }
+
+            order.setItems(orderItems);
+            order.setTotalPrice(totalPrice); // Set the total price for the order
+            orderRepository.save(order);
         }
     }
 }

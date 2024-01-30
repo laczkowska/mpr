@@ -26,8 +26,6 @@ public class BookController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
     }
-
-
     @GetMapping
     public ResponseEntity<List<BookDTO>> getAllBooks() {
         try {

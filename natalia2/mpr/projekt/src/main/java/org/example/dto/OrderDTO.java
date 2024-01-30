@@ -57,6 +57,8 @@ public class OrderDTO {
                 .mapToDouble(item -> item.getPrice() * item.getQuantity())
                 .sum();
     }
+
+
 }
 
 
